@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Project ITT544</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+
+</style>
+
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-black w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Car-I</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>      
+  </div>
+
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Company Name</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+
+<body>
+
+   <h1> Find Car </h1>
+   <h1 id="answer"></h1>
+
+ 	<input type="number" id="income"  placeholder="Your monthly income" >
+	<br>
+	<br>
+	<button onclick="sum()">calculate</button>
+
+   <script> 
+
+	function sum()
+	{
+	  var field1=document.getElementById("income").value;
+
+	  var result=parseFloat(field1) * 12;
+
+	  if(!isNaN(result))
+	  {
+	   document.getElementById("answer").innerHTML="Suggested car price: RM " + result;
+	  }
+	}
+
+   </script>
+
+
+<h2>Car's Information</h2>
+
+<table>
+  <tr>
+    <th>Model</th>
+    <th>Brand</th>
+    <th>Price</th>
+    <th>Fuel Consumption (KM/1Litre)</th>
+    <th>Annual Maintenance Range</th>
+  </tr>
+   <tr>
+    <td>Axia 1.0 G (AT)</td>
+    <td>Perodua</td>
+    <td>RM 34,600</td>
+    <td>21.6</td>
+    <td>RM 120 - RM 250</td>
+  </tr>
+  <tr>
+    <td>Axia 1.0 Style (AT)</td>
+    <td>Perodua</td>
+    <td>RM 36,220</td>
+    <td>21.6</td>
+    <td>RM 120 - RM 250</td>
+  </tr>
+   <tr>
+    <td>Axia 1.0 SE (AT)</td>
+    <td>Perodua</td>
+    <td>RM 40,200</td>
+    <td>21.6</td>
+    <td>RM 120 - RM 250</td>
+  </tr>
+   <tr>
+    <td>Bezza 1.0 G (MT)</td>
+    <td>Perodua</td>
+    <td>RM 35,750</td>
+    <td>20.5</td>
+    <td>RM 120 - RM 300</td>
+  </tr>
+   <tr>
+    <td>Bezza 1.0 G (AT)</td>
+    <td>Perodua</td>
+    <td>RM 37,840</td>
+    <td>20.5</td>
+    <td>RM 120 - RM 300</td>
+  </tr>
+  <tr>
+    <td>Bezza 1.3 G (AT)</td>
+    <td>Perodua</td>
+    <td>RM 51,630</td>
+    <td>20</td>
+    <td>RM 120 - RM 300</td>
+  </tr>
+  <tr>
+    <td>Myvi 1.3 G (MT)</td>
+    <td>Perodua</td>
+    <td>RM 44,200</td>
+    <td>21</td>
+    <td>RM 170 - RM 450</td>
+  </tr>
+  <tr>
+    <td>Myvi 1.3 G (AT)</td>
+    <td>Perodua</td>
+    <td>RM 46,000</td>
+    <td>21</td>
+    <td>RM 170 - RM 450</td>
+  </tr>
+  <tr>
+    <td>Myvi 1.5 AV (AT)</td>
+    <td>Perodua</td>
+    <td>RM 55,880</td>
+    <td>20</td>
+    <td>RM 170 - RM 450</td>
+  </tr>
+  <tr>
+    <td>Alza 1.5 s (MT)</td>
+    <td>Perodua</td>
+    <td>RM 53,200</td>
+    <td>18</td>
+    <td>RM 200 - RM 450</td>
+  </tr>
+  <tr>
+    <td>Alza 1.5 s (MT)</td>
+    <td>Perodua</td>
+    <td>RM 53,200</td>
+    <td>18</td>
+    <td>RM 200 - RM 450</td>
+  </tr>
+  <tr>
+    <td>Alza 1.5 s (AT)</td>
+    <td>Perodua</td>
+    <td>RM 56,080</td>
+    <td>16</td>
+    <td>RM 200 - RM 450</td>
+  </tr>
+  <tr>
+    <td>Alza 1.5 SE (AT)</td>
+    <td>Perodua</td>
+    <td>RM 58,760</td>
+    <td>16</td>
+    <td>RM 200 - RM 450</td>
+  </tr>
+  <tr>
+    <td>Aruz 1.5 X (AT)</td>
+    <td>Perodua</td>
+    <td>RM 75,210</td>
+    <td>16</td>
+    <td>RM 210 - RM 500</td>
+  </tr>
+  <tr>
+    <td>Aruz 1.5 AV (AT)</td>
+    <td>Perodua</td>
+    <td>RM 80,3550</td>
+    <td>16</td>
+    <td>RM 210 - RM 500</td>
+  </tr>
+  <tr>
+    <td>Saga 1.3 (MT)</td>
+    <td>Proton</td>
+    <td>RM 35,720</td>
+    <td>14</td>
+    <td>RM 180 - RM 400</td>
+  </tr>
+  <tr>
+    <td>Saga 1.3 (AT)</td>
+    <td>Proton</td>
+    <td>RM 38,700</td>
+    <td>14</td>
+    <td>RM 180 - RM 400</td>
+  </tr>
+  <tr>
+    <td>Persona 1.6 (MT)</td>
+    <td>Proton</td>
+    <td>RM 45,700</td>
+    <td>10</td>
+    <td>RM 220 - RM 550</td>
+  </tr>
+  <tr>
+    <td>Persona Executive 1.6 (AT)</td>
+    <td>Proton</td>
+    <td>RM 52,900</td>
+    <td>10</td>
+    <td>RM 220 - RM 550</td>
+  </tr>
+  <tr>
+    <td>Iriz 1.3 (MT)</td>
+    <td>Proton</td>
+    <td>RM 39,700</td>
+    <td>16</td>
+    <td>RM 200 - RM 500</td>
+  </tr>
+  <tr>
+    <td>Iriz Executive 1.3 (AT)</td>
+    <td>Proton</td>
+    <td>RM 47,880</td>
+    <td>16</td>
+    <td>RM 200 - RM 500</td>
+  </tr>
+  <tr>
+    <td>Iriz Premium 1.6 (AT)</td>
+    <td>Proton</td>
+    <td>RM 54,040</td>
+    <td>14</td>
+    <td>RM 200 - RM 550</td>
+  </tr>
+  <tr>
+    <td>Exora Executive 1.6 (AT)</td>
+    <td>Proton</td>
+    <td>RM 63,855</td>
+    <td>14</td>
+    <td>RM 200 - RM 500</td>
+  </tr>
+  <tr>
+    <td>X70 1.8 (AT)</td>
+    <td>Proton</td>
+    <td>RM 96,840</td>
+    <td>10.2</td>
+    <td>RM 300 - RM 650</td>
+  </tr>
+  <tr>
+    <td>X70 Executive 1.8 (AT)</td>
+    <td>Proton</td>
+    <td>RM 109,070</td>
+    <td>10.2</td>
+    <td>RM 300 - RM 650</td>
+  </tr>
+</table>
+
+
+</body>
+</html>
+

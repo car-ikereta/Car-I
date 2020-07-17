@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Project ITT544</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-black w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Car-I</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">HOME</a> 
+    <a href="addnewcar.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Add New Car</a> 
+    <a href="remove.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Remove Car</a> 
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Car-I</span>
+</header>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>WELCOME TO CAR-I</b></h1>
+    <h1 class="w3-xxxlarge w3-text-black"><b>Add New Car</b></h1>
+    <hr style="width:50px;border:5px solid grey" class="w3-round">
+
+<form action="addnewcar.php" method="POST">
+
+	<div class="input-group">
+    <p>Car Model</p>
+    <input list="carmodel">
+    <datalist id="carmodel">
+    <option value="AXIA">
+    <option value="BEZZA">
+    <option value="MYVI">
+    <option value="ALZA">
+    <option value="-SAGA">
+    <option value="PERSONA">
+    <option value="IRIZ">
+    <option value="EXORA">
+    <option value="X70">
+
+	</div>
+	<div class="input-group">
+<p>Car Brand</p>
+  <input list="carbrand">
+  <datalist id="carbrand">
+    <option value="PERODUA">
+    <option value="PROTON">
+  </datalist><br><br>
+	</div>
+
+              <div class="input-group">
+		<label>Car Price</label><br>
+		<input type="text" name="carprice"><br>
+	</div>
+
+   <div class="input-group">
+	<p>Annual Maintenance</p>
+  <input list="maintenance">
+  <datalist id="maintenance">
+    <option value="120-250">
+    <option value="120-300">
+<option value="170-450">
+<option value="170-500">
+<option value="200-450">
+<option value="210-550">
+<option value="200-500">
+<option value="300-650">
+<option value="200-550">
+  </datalist><br><br>
+	</div>
+               <div class="input-group">
+		<label>Fuel Compsumption</label><br>
+		<input type="text" name="fuelcomp"><br><br>
+
+
+	<div class="input-group">
+		<button onclick="myFunction()" type="submit" class="btn btn-primary">Add</button>
+
+		<script>
+			function myFunction() {
+  				alert("You added a new car!");
+			}
+		</script>
+
+	</div>
+
+</form>
+
+
+  </div>
+
+</script>
+</body>
